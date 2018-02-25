@@ -23,7 +23,7 @@
     "inquirer": "^5.1.0",
     "prop-types": "^15.6.0",
     "require-json5": "^1.0.2",
-    "stringify-object": "^3.2.2",
+    "stringify-object": "^3.2.2"
   },
   "devDependencies": {
     "tailwindcss": "^0.4.1"
