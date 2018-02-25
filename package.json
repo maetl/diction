@@ -1,0 +1,31 @@
+{
+  "name": "diction",
+  "version": "0.0.1",
+  "description": "A framework for design decisions",
+  "main": "diction.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "design",
+    "tokens",
+    "language",
+    "patterns",
+    "css",
+    "components",
+    "atomic"
+  ],
+  "author": "Mark Rickerby",
+  "license": "MIT",
+  "dependencies": {
+    "check-prop-types": "^1.1.2",
+    "commander": "^2.14.1",
+    "inquirer": "^5.1.0",
+    "prop-types": "^15.6.0",
+    "require-json5": "^1.0.2",
+    "stringify-object": "^3.2.2",
+  },
+  "devDependencies": {
+    "tailwindcss": "^0.4.1"
+  }
+}

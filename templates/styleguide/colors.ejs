@@ -1,0 +1,77 @@
+<html>
+<head>
+<style>
+  body {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    color: <%= color.primary.dark %>;
+  }
+  main {
+    width: 60vw;
+    margin: 2rem auto;
+  }
+  main h1 {
+    margin: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid <%= color.primary.dark %>;
+  }
+  .container {
+    display: flex;
+  }
+  .color-group {
+    width: 50%;
+    margin: 1rem;
+  }
+  .color-chip {
+    height: 3rem;
+    margin: 0;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+  }
+  .color-chip:first-of-type {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .color-chip:last-of-type {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  .color-chip p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+  }
+  .color-chip p:first-of-type {
+    text-transform: capitalize;
+  }
+<% Object.keys(color).forEach(property => {
+  Object.keys(color[property]).forEach(variant => { %>
+  .color-<%= property %>-<%= variant %> {
+    background-color: <%= color[property][variant] %>;
+    color: <%= color.primary[textContrast(color[property][variant])] %>;
+  }
+  <% }) %>
+<% }) %>
+</style>
+</head>
+<body>
+<main>
+<h1>Colors</h1>
+<div class="container">
+<% Object.keys(color).forEach(property => { %>
+  <div class="color-group">
+  <h2><%= capitalize(property) %> Palette</h2>
+  <div class="color-stack">
+  <% Object.keys(color[property]).forEach(variant => { %>
+    <div class="color-chip color-<%= property %>-<%= variant %>">
+      <p><%= property %> <%= variant %></p>
+      <p><%= color[property][variant] %></p>
+    </div>
+  <% }) %>
+  </div>
+  </div>
+<% }) %>
+</div>
+</main>
+</body>
+</html>
