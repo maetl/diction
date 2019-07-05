@@ -1,0 +1,36 @@
+$ratio-double-octave: 4;
+$ratio-pi: 3.14159265359;
+$ratio-major-twelfth: 3;
+$ratio-major-eleventh: 2.666666667;
+$ratio-major-tenth: 2.5;
+$ratio-octave: 2;
+$ratio-major-seventh: 1.875;
+$ratio-minor-seventh: 1.777777778;
+$ratio-major-sixth: 1.666666667;
+$ratio-phi: 1.618034;
+$ratio-golden: $ratio-phi;
+$ratio-minor-sixth: 1.6;
+$ratio-fifth: 1.5;
+$ratio-augmented-fourth: 1.41421;
+$ratio-fourth: 1.333333333;
+$ratio-major-third: 1.25;
+$ratio-minor-third: 1.2;
+$ratio-major-second: 1.125;
+$ratio-minor-second: 1.066666667;
+
+$scale-ratio: $ratio-minor-third !default;
+$scale-base: 1rem !default;
+
+$scale-p0: $scale-base;
+$scale-p1: $scale-base * $scale-ratio;
+$scale-p2: $scale-base * ($scale-ratio * 2);
+$scale-p3: $scale-base * ($scale-ratio * 3);
+$scale-p4: $scale-base * ($scale-ratio * 4);
+$scale-p5: $scale-base * ($scale-ratio * 5);
+$scale-p6: $scale-base * ($scale-ratio * 6);
+
+$scale-m0: $scale-base;
+$scale-m1: $scale-base / $scale-ratio;
+$scale-m2: $scale-base / ($scale-ratio * 2);
+$scale-m3: $scale-base / ($scale-ratio * 3);
+$scale-m4: $scale-base / ($scale-ratio * 4);
