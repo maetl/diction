@@ -1,6 +1,6 @@
 {
-  "name": "diction",
-  "version": "0.1.0",
+  "name": "gable",
+  "version": "0.0.1",
   "description": "A framework for design decisions",
   "main": "diction.js",
   "scripts": {
