@@ -1,0 +1,67 @@
+$font-stack-system-sans: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$font-stack-system-mono: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+
+$font-body-face: $font-stack-system-sans !default;
+$font-body-weight: 400 !default;
+
+$font-display-face: $font-stack-system-sans !default;
+$font-display-weight: 800 !default;
+
+$font-mono-face: $font-stack-system-mono !default;
+$font-mono-weight: 400 !default;
+
+body {
+  font-family: $font-body-face;
+  font-weight: $font-body-weight;
+  line-height: $scale-ratio;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display-face;
+  font-weight: $font-display-weight;
+  line-height: $scale-ratio;
+}
+
+h1 {
+  font-size: $scale-p3;
+  line-height: $scale-ratio;
+
+  &.mega {
+    font-size: $scale-p4;
+  }
+
+  &.midi {
+    font-size: $scale-p2;
+  }
+
+  &.micro {
+    font-size: $scale-p1;
+  }
+}
+
+h2 {
+  font-size: $scale-p2;
+}
+
+h3, h4 {
+  font-size: $scale-p1;
+  margin-bottom: $scale-p0;
+}
+
+h5, h6 {
+  font-size: $scale-p0;
+}
+
+h4, h6 {
+  font-variant: small-caps;
+}
+
+p, li {
+  font-size: $scale-p0;
+  line-height: $scale-ratio;
+}
+
+pre, code {
+  font-family: $font-mono-face;
+  font-size: $font-mono-weight;
+}

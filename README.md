@@ -31,6 +31,6 @@ import "gable/bundle/gable.css";
 For projects using Sass, you can import the source files directly:
 
 ```scss
-@import "~gable/ui/foundation";
-@import "~gable/ui/components/breadcrumbs";
+@import "~gable/foundation";
+@import "~gable/components/breadcrumbs";
 ```

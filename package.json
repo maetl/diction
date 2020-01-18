@@ -2,10 +2,14 @@
   "name": "gable",
   "version": "0.0.2",
   "description": "A modular UI pattern system",
-  "main": "diction.js",
+  "main": "gable.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "components/**/*",
+    "foundation/**/*"
+  ],
   "keywords": [
     "design",
     "tokens",
@@ -18,8 +22,5 @@
   "author": "Mark Rickerby",
   "license": "MIT",
   "peerDependencies": {},
-  "dependencies": {},
-  "devDependencies": {
-    "tailwindcss": "^0.4.1"
-  }
+  "dependencies": {}
 }
