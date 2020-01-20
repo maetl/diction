@@ -1,6 +1,6 @@
 {
   "name": "gable",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A modular UI pattern system",
   "main": "gable.js",
   "scripts": {
