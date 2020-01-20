@@ -1,0 +1,9 @@
+$container-max-width: $media-max-desktop !default;
+$container-padding: $scale-p1 !default;
+
+.container {
+  margin: 0 auto;
+  padding: $container-padding;
+  position: relative;
+  max-width: $container-max-width;
+}

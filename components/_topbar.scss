@@ -1,0 +1,182 @@
+$topbar-height: ($scale-p0 + $scale-m3) * 3;
+$topbar-transition-timing: 0.2s;
+
+$topbar-background-color: $color-primary-dark;
+$topbar-background-hover-color: $color-primary-mid;
+
+$topbar-logo-color: $color-white;
+$topbar-item-color: $color-white;
+
+.topbar {
+  width: 100%;
+  height: $topbar-height;
+  background-color: $topbar-background-color;
+
+  @include until-tablet {
+    //transition: height $topbar-transition-timing ease-in;
+
+    .topbar-menu {
+      visibility: hidden;
+    }
+
+    &.open {
+      height: 100vh;
+      //transition: height $topbar-transition-timing ease-in;
+      overflow-y: scroll;
+
+      .logo {
+        height: $topbar-height;
+        //background-color: $color-navbar-hover;
+      }
+
+      .topbar-menu {
+        visibility: visible;
+      }
+    }
+  }
+
+  @include at-least-tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include at-least-desktop {
+    justify-content: space-between;
+  }
+
+  .topbar-toggle {
+    color: $color-white;
+    font-size: $scale-p2;
+    height: $topbar-height;
+    display: inline-block;
+    line-height: $scale-p2;
+
+    &:hover {
+      //background-color: $color-navbar-hover;
+    }
+
+    @include at-least-tablet {
+      display: none;
+    }
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0px;
+    z-index: 2000;
+  }
+
+  .topbar-brand {
+    @include at-least-tablet {
+      display: flex;
+      align-items: center;
+    }
+
+    @include until-tablet {
+      width: 100%;
+
+      .topbar-menu ul {
+        margin: 0 !important;
+        justify-content: center;
+      }
+    }
+
+    .topbar-logo {
+      height: $topbar-height;
+      display: flex;
+      align-items: center;
+    }
+
+    // TODO: flexible dimensions for logo images
+    // .topbar-logo-mark {
+    //   width: 36px;
+    //   height: 36px;
+    //   padding: $scale-p0 $scale-m1 $scale-p0 0;
+    // }
+
+    h1, p, span {
+      color: $topbar-logo-color;
+      font-family: $font-display-face;
+      font-weight: 800;
+      font-size: $scale-p1;
+      padding: 0 $scale-p0;
+      margin: 0 !important;
+    }
+  }
+
+  .topbar-menu {
+    @include at-least-desktop {
+      margin-left: $scale-p3;
+    }
+
+    &.right {
+      margin-left: 0;
+    }
+
+    ul {
+      margin: 0 !important;
+
+      @include at-least-tablet {
+        display: flex;
+        align-items: center;
+      }
+
+      li {
+        font-size: $scale-p0;
+        line-height: 1.2;
+        height: $topbar-height;
+        font-family: $font-display-face;
+        font-weight: 700;
+        color: $topbar-item-color;
+
+        a {
+          display: block;
+          box-sizing: border-box;
+          padding: $scale-p0 + $scale-m3;
+          height: $topbar-height;
+          color: $topbar-item-color;
+
+          &:hover {
+            background-color: $topbar-background-hover-color;
+          }
+
+          svg {
+            display: inline;
+          }
+
+          span {
+            display: none;
+          }
+        }
+
+        @include until-tablet {
+          font-size: $scale-p2;
+          height: auto;
+
+          a {
+            height: auto;
+
+            svg {
+              display: none;
+            }
+
+            span {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// When the .topbar is used in conjunction with .sidebar and .main, need to
+// adjust the height dynamically to ensure everything responds to the viewport
+// dimensions correctly.
+.topbar + .sidebar {
+  height: calc(100vh - #{$topbar-height});
+}
+
+.topbar + .sidebar + .main {
+  height: calc(100vh - #{$topbar-height});
+}

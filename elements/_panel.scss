@@ -1,0 +1,9 @@
+//$panel-color-border: $color-neutral-light;
+
+.panel {
+  border-top: 2px solid $color-neutral-light;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: $scale-p1;
+  padding: $scale-p0;
+}

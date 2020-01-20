@@ -1,0 +1,97 @@
+$sidebar-width: $scale-p0 * 16;
+$sidebar-background-color: $color-primary-mid;
+$sidebar-background-active-color: $color-primary-dark;
+$sidebar-text-color: $color-white;
+$sidebar-border-color: $color-primary-light;
+
+.sidebar {
+  background-color: $sidebar-background-color;
+  color: $sidebar-text-color;
+  width: $sidebar-width;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  //padding: $scale-p1;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+
+  @include until-desktop {
+    z-index: 100;
+    width: $scale-p3;
+    transition: width $material-ease-duration ease-out;
+
+    &.open {
+      transition: width $material-ease-duration;
+      width: $sidebar-width;
+      z-index: 1000;
+
+      .sidebar-toggle {
+        transform: rotate(180deg);
+      }
+
+      .menu {
+        display: block;
+      }
+    }
+  }
+
+  .sidebar-toggle {
+    color: $color-white;
+    font-size: $scale-p2;
+    width: $scale-p3;
+    height: $scale-p3;
+    display: inline-block;
+    line-height: $scale-p2;
+
+    &:hover {
+      //background-color: $color-navbar-hover;
+    }
+
+    @include at-least-desktop {
+      display: none;
+    }
+  }
+
+  // When menus appear inside the sidebar context, they need to inherit
+  // styling from the parent, rather than assume normal content menu styling.
+  .menu {
+    @include until-desktop {
+      display: none;
+    }
+
+    .menu-list {
+      li {
+        border-top: 1px solid $sidebar-border-color;
+      }
+    }
+
+    .menu-label, .menu-list {
+      a {
+        &.active {
+          color: $sidebar-text-color;
+          background-color: $sidebar-background-active-color;
+        }
+
+        &:hover {
+          &:not(.active) {
+            background-color: $sidebar-background-active-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// When a main workspace pane is placed after the sidebar, it needs to be
+// repositioned inward, with both elements becoming independently scrollable.
+.sidebar + .main {
+  width: calc(100vw - #{$scale-p3});
+  left: $scale-p3;
+
+  @include at-least-desktop {
+    width: calc(100vw - #{$sidebar-width});
+    left: $sidebar-width;
+  }
+}

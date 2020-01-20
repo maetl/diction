@@ -1,0 +1,95 @@
+$button-basic-color: $color-neutral-dark !default;
+$button-basic-border: 1px solid $color-neutral-light !default;
+$button-hover-border: 1px solid $color-neutral-dark !default;
+//$button-basic-shadow: 0px 2px 0px 0px $color-neutral-lightest !default;
+//$button-focus-shadow: inset 0px 0px 0px 1px $button-basic-color !default;
+
+.button {
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+  line-height: 1;
+  font-size: $scale-p0;
+  border-radius: $scale-m4;
+  padding: $scale-m1;
+  color: $button-basic-color;
+  border: $button-basic-border;
+  //box-shadow: $button-basic-shadow;
+
+  // TODO: needs to be tested and documented
+  &.inverted {
+    color: $color-white;
+    border: 1px solid $color-white;
+
+    &:hover {
+      color: $color-neutral-light;
+      border: 1px solid $color-neutral-light;
+    }
+
+    &:focus {
+      box-shadow: inset 0px 0px 0px 1px $color-neutral-light;
+      border: 1px solid $color-neutral-light;
+    }
+  }
+
+  &:hover {
+    border: $button-hover-border;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0px 0px 0px 1px $button-basic-color;
+    border: $button-hover-border;
+  }
+
+  &.primary {
+    color: $color-white;
+    background-color: $color-primary-dark;
+    border: 1px solid $color-primary-dark;
+
+    &:hover {
+      background-color: $color-primary-mid;
+      border: 1px solid $color-primary-dark;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 0px 0px 0px 1px $color-primary-light;
+      border: 1px solid $color-primary-light;
+    }
+  }
+
+  &.secondary {
+    color: $color-white;
+    background-color: $color-secondary-dark;
+    border: 1px solid $color-secondary-dark;
+
+    &:hover {
+      background-color: $color-secondary-mid;
+      border: 1px solid $color-secondary-dark;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 0px 0px 0px 1px $color-secondary-light;
+      border: 1px solid $color-secondary-light;
+    }
+  }
+
+  &.accent {
+    color: $color-white;
+    background-color: $color-accent-dark;
+    border: 1px solid $color-accent-dark;
+
+    &:hover {
+      background-color: $color-accent-mid;
+      border: 1px solid $color-accent-dark;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 0px 0px 0px 1px $color-accent-light;
+      border: 1px solid $color-accent-light;
+    }
+  }
+}

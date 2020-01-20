@@ -1,0 +1,9 @@
+$main-background-color: $color-white !default;
+
+.main {
+  background-color: $main-background-color;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  position: absolute;
+}

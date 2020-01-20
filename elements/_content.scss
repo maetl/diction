@@ -1,0 +1,23 @@
+$content-code-color: $color-primary-dark !default;
+$content-link-color: $color-neutral-mid !default;
+
+.content {
+  h1, h2, h3, h4, h5, h6, p, ul, ol, figure, table {
+    margin-bottom: $scale-p1;
+  }
+
+  li {
+    display: list-item;
+    list-style-type: disc;
+    margin-left: $scale-p1;
+  }
+
+  code {
+    color: $content-code-color;
+  }
+
+  a {
+    color: $content-link-color;
+    text-decoration: underline;
+  }
+}

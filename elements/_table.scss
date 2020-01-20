@@ -1,0 +1,37 @@
+.table {
+  // TODO: move this to reset CSS
+  border-collapse: collapse;
+  //border-spacing: 0;
+
+  td, th {
+    margin: 0;
+    padding: $scale-m2;
+    border-bottom: 1px solid $color-neutral-light;
+  }
+
+  tr:first-of-type {
+    td, th {
+      border-top: 1px solid $color-neutral-light;
+    }
+  }
+
+  &.striped {
+    tr:nth-child(even) {
+      td, th {
+        background-color: $color-neutral-lightest;
+      }
+    }
+  }
+
+  &.grid {
+    td, th {
+      border: 1px solid $color-neutral-light;
+    }
+  }
+
+  &.compact {
+    td, th {
+      padding: $scale-m4;
+    }
+  }
+}
