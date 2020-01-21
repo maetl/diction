@@ -1,0 +1,59 @@
+$menu-label-font-size: $scale-p0;
+$menu-label-font-weight: $font-display-weight;
+$menu-label-font-face: $font-display-face;
+
+$menu-background-hover-color: $color-neutral-lightest;
+$menu-border-color: $color-neutral-light;
+
+.menu {
+  width: 100%;
+  padding-top: $scale-p0;
+
+  .menu-label {
+    margin: $scale-p0 0 $scale-m1 $scale-p0;
+    font-weight: $menu-label-font-weight;
+    font-family: $menu-label-font-face;
+    font-size: $menu-label-font-size;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    a {
+      display: block;
+      padding: $scale-m1 $scale-p0;
+    }
+  }
+
+  .menu-list {
+    li {
+      display: block;
+      border-top: 1px solid $menu-border-color;
+    }
+
+    a {
+      display: block;
+      padding: $scale-m1 $scale-p0;
+    }
+
+    p {
+      padding: $scale-m1 $scale-p0;
+    }
+  }
+
+  // TODO: this only works inside the sidebar context
+  .menu-label, .menu-list {
+    a {
+      // &.active {
+      //   color: $color-white;
+      //   background-color: $color-eucalyptus;
+      // }
+
+      &:hover {
+        &:not(.active) {
+          background-color: $menu-background-hover-color;
+        }
+      }
+    }
+  }
+}
