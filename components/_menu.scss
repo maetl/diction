@@ -1,9 +1,9 @@
-$menu-label-font-size: $scale-p0;
-$menu-label-font-weight: $font-display-weight;
-$menu-label-font-face: $font-display-face;
+$menu-label-font-size: $scale-p0 !default;
+$menu-label-font-weight: $font-display-weight !default;
+$menu-label-font-face: $font-display-face !default;
 
-$menu-background-hover-color: $color-neutral-lightest;
-$menu-border-color: $color-neutral-light;
+$menu-background-hover-color: $color-neutral-lightest !default;
+$menu-border-color: $color-neutral-light !default;
 
 .menu {
   width: 100%;

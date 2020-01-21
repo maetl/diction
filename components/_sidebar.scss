@@ -1,8 +1,8 @@
 $sidebar-width: $scale-p0 * 16;
-$sidebar-background-color: $color-primary-mid;
-$sidebar-background-active-color: $color-primary-dark;
-$sidebar-text-color: $color-white;
-$sidebar-border-color: $color-primary-light;
+$sidebar-background-color: $color-primary-mid !default;
+$sidebar-background-active-color: $color-primary-dark !default;
+$sidebar-text-color: $color-white !default;
+$sidebar-border-color: $color-primary-light !default;
 
 .sidebar {
   background-color: $sidebar-background-color;

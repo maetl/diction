@@ -1,11 +1,11 @@
 $topbar-height: ($scale-p0 + $scale-m3) * 3;
 $topbar-transition-timing: 0.2s;
 
-$topbar-background-color: $color-primary-dark;
-$topbar-background-hover-color: $color-primary-mid;
+$topbar-background-color: $color-primary-dark !default;
+$topbar-background-hover-color: $color-primary-mid !default;
 
-$topbar-logo-color: $color-white;
-$topbar-item-color: $color-white;
+$topbar-logo-color: $color-white !default;
+$topbar-item-color: $color-white !default;
 
 .topbar {
   width: 100%;
