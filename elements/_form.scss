@@ -92,114 +92,114 @@ input[type="search"] {
   border-radius: 0.75rem;
 }
 
-input[type="radio"] {
-  position: absolute;
-  left: -9999999px;
-}
-
-input[type="radio"] + label {
-  position: relative;
-  margin-left: 2rem;
-}
-
-input[type="radio"] + label::before {
-  content: '';
-  position: absolute;
-  top: -0.2rem;
-  left: -2rem;
-  margin-right: 0.5rem;
-  width: $scale-p1;
-  height: $scale-p1;
-  display: inline-block;
-  border: $form-border;
-  border-radius: 50%;
-  cursor: pointer;
-  background-color: #FFFFFF;
-}
-
-input[type="radio"] + label:hover::before {
-  border-color: #243B55;
-}
-
-input[type="radio"]:checked + label::after {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: -27px;
-  margin-right: 0.5rem;
-  width: 1rem;
-  height: 1rem;
-  display: block;
-  background-color: #243B55;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-input[type="radio"]:focus + label::before {
-  border-color: #243B55;
-}
-
-input[type="radio"]:disabled + label {
-  pointer-events: none;
-}
-
-input[type="radio"]:disabled + label::before {
-  background-color: #FAFAFA;
-}
-
-input[type="checkbox"] {
-  position: absolute;
-  left: -9999999px;
-}
-
-input[type="checkbox"] + label {
-  position: relative;
-  margin-left: 2rem;
-}
-
-input[type="checkbox"] + label::before {
-  content: '';
-  position: absolute;
-  top: -0.2rem;
-  left: -2rem;
-  margin-right: 0.5rem;
-  width: $scale-p1;
-  height: $scale-p1;
-  display: inline-block;
-  border: $form-border;
-  border-radius: 0.2rem;
-  cursor: pointer;
-  background-color: #FFFFFF;
-}
-
-input[type="checkbox"] + label:hover::before {
-  border-color: #243B55;
-}
-
-input[type="checkbox"]:checked + label::after {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: -27px;
-  margin-right: 0.5rem;
-  width: 1rem;
-  height: 1rem;
-  display: block;
-  background-color: #243B55;
-  cursor: pointer;
-}
-
-input[type="checkbox"]:focus + label::before {
-  border-color: #243B55;
-}
-
-input[type="checkbox"]:disabled + label {
-  pointer-events: none;
-}
-
-input[type="checkbox"]:disabled + label::before {
-  background-color: #FAFAFA;
-}
+// input[type="radio"] {
+//   position: absolute;
+//   left: -9999999px;
+// }
+//
+// input[type="radio"] + label {
+//   position: relative;
+//   margin-left: 2rem;
+// }
+//
+// input[type="radio"] + label::before {
+//   content: '';
+//   position: absolute;
+//   top: -0.2rem;
+//   left: -2rem;
+//   margin-right: 0.5rem;
+//   width: $scale-p1;
+//   height: $scale-p1;
+//   display: inline-block;
+//   border: $form-border;
+//   border-radius: 50%;
+//   cursor: pointer;
+//   background-color: #FFFFFF;
+// }
+//
+// input[type="radio"] + label:hover::before {
+//   border-color: #243B55;
+// }
+//
+// input[type="radio"]:checked + label::after {
+//   content: '';
+//   position: absolute;
+//   top: 2px;
+//   left: -27px;
+//   margin-right: 0.5rem;
+//   width: 1rem;
+//   height: 1rem;
+//   display: block;
+//   background-color: #243B55;
+//   border-radius: 50%;
+//   cursor: pointer;
+// }
+//
+// input[type="radio"]:focus + label::before {
+//   border-color: #243B55;
+// }
+//
+// input[type="radio"]:disabled + label {
+//   pointer-events: none;
+// }
+//
+// input[type="radio"]:disabled + label::before {
+//   background-color: #FAFAFA;
+// }
+//
+// input[type="checkbox"] {
+//   position: absolute;
+//   left: -9999999px;
+// }
+//
+// input[type="checkbox"] + label {
+//   position: relative;
+//   margin-left: 2rem;
+// }
+//
+// input[type="checkbox"] + label::before {
+//   content: '';
+//   position: absolute;
+//   top: -0.2rem;
+//   left: -2rem;
+//   margin-right: 0.5rem;
+//   width: $scale-p1;
+//   height: $scale-p1;
+//   display: inline-block;
+//   border: $form-border;
+//   border-radius: 0.2rem;
+//   cursor: pointer;
+//   background-color: #FFFFFF;
+// }
+//
+// input[type="checkbox"] + label:hover::before {
+//   border-color: #243B55;
+// }
+//
+// input[type="checkbox"]:checked + label::after {
+//   content: '';
+//   position: absolute;
+//   top: 2px;
+//   left: -27px;
+//   margin-right: 0.5rem;
+//   width: 1rem;
+//   height: 1rem;
+//   display: block;
+//   background-color: #243B55;
+//   cursor: pointer;
+// }
+//
+// input[type="checkbox"]:focus + label::before {
+//   border-color: #243B55;
+// }
+//
+// input[type="checkbox"]:disabled + label {
+//   pointer-events: none;
+// }
+//
+// input[type="checkbox"]:disabled + label::before {
+//   background-color: #FAFAFA;
+// }
 
 .select {
   display: inline-block;
