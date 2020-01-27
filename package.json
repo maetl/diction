@@ -1,9 +1,10 @@
 {
   "name": "gable",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A modular UI pattern system",
   "main": "gable.js",
   "scripts": {
+    "dist": "node-sass dist.scss demo/dist.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
@@ -23,5 +24,8 @@
   "author": "Mark Rickerby",
   "license": "MIT",
   "peerDependencies": {},
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
 }
