@@ -1,0 +1,34 @@
+$badge-font-size: 1em;
+$badge-gutter: $badge-font-size / ($scale-ratio * 2);
+$badge-height: $badge-gutter * 2 + $badge-font-size;
+
+.badge {
+  font-size: $badge-font-size;
+  line-height: $badge-font-size;
+  padding: $badge-gutter;
+  background-color: $color-neutral-mid;
+  border: 1px solid $color-neutral-mid;
+  color: $color-white;
+  border-radius: 6px;
+
+  &.badge-inverted {
+    border: 1px solid $color-neutral-mid;
+    background-color: $color-white;
+    color: $color-neutral-mid;
+  }
+
+  &.badge-tag {
+    padding-left: $badge-gutter * 2;
+    clip-path:
+      polygon(
+        0% 48%,     /* top left */
+        10% 0%,     /* top left */
+        100% 0%,    /* top right */
+        100% 0%,   /* top right */
+        100% 100%,  /* bottom right */
+        100% 100%,  /* bottom right */
+        10% 100%,   /* bottom left */
+        0 52%      /* bottom left */
+      );
+  }
+}
