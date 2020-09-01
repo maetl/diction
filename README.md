@@ -34,3 +34,24 @@ For projects using Sass, you can import the source files directly:
 @import "~gable/foundation";
 @import "~gable/components/breadcrumbs";
 ```
+
+## Roadmap
+
+Tentative future direction for the library.
+
+### Components
+
+- Breadcrumbs
+- Badge
+- Button
+- Sidebar
+- Topbar
+- Workspace
+- Calendar
+
+### Controls
+
+- input-date
+- input-text
+- input-number
+- input-money
