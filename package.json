@@ -4,8 +4,12 @@
   "description": "A modular UI pattern system",
   "main": "gable.js",
   "scripts": {
+    "start": "npm run storybook",
+    "build": "echo \"Fucking complexity\" && exit 1",
     "dist": "node-sass dist.scss demo/dist.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006 -s ./demo",
+    "build-storybook": "build-storybook"
   },
   "files": [
     "components/**/*",
@@ -24,8 +28,16 @@
   "author": "Mark Rickerby",
   "license": "MIT",
   "peerDependencies": {},
-  "dependencies": {},
   "devDependencies": {
-    "node-sass": "^4.13.1"
-  }
+    "@babel/core": "^7.11.5",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/cli": "^6.0.21",
+    "@storybook/react": "^6.0.21",
+    "babel-loader": "^8.1.0",
+    "node-sass": "^4.14.1",
+    "react-is": "^16.13.1"
+  },
+  "dependencies": {}
 }
